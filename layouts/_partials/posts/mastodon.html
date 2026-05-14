@@ -1,9 +1,11 @@
 {{- if isset .Site.Params "mastodon" -}}
+  {{- $page := . -}}
   {{- with .Site.Params.mastodon -}}
+    {{- $statusID := ($page.Params.statusID | default .statusID) -}}
   <div class="article-content">
     <h2>Comments</h2>
-    <p>You can use your Mastodon account to reply to this <a class="link" href="https://{{ .host }}/@{{ .username }}/{{ .statusID }}">post</a>. Learn how this is implemented <a class="link" href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/">here.</a></p>
-    <p><button id="replyButton" href="https://{{ .host }}/@{{ .username }}/{{ .statusID }}">Reply</button></p>
+    <p>You can use your Mastodon account to reply to this <a class="link" href="https://{{ .host }}/@{{ .username }}/{{ $statusID }}">post</a>. Learn how this is implemented <a class="link" href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/">here.</a></p>
+    <p><button id="replyButton" href="https://{{ .host }}/@{{ .username }}/{{ $statusID }}">Reply</button></p>
     <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
     <dialog id="toot-reply" class="mastodon" data-component="dialog">
       <h3>Reply to {{ .username }}'s post</h3>
@@ -13,7 +15,7 @@
       </p>
       <p>Copy and paste this URL into the search field of your favourite Fediverse app or the web interface of your Mastodon server.</p>
       <div class="copypaste">
-        <input type="text" readonly="" value="https://{{ .host }}/@{{ .username }}/{{ .statusID }}">
+        <input type="text" readonly="" value="https://{{ .host }}/@{{ .username }}/{{ $statusID }}">
         <button class="button" id="copyButton">Copy</button>
         <button class="button" id="cancelButton">Close</button>
       </div>
@@ -29,7 +31,7 @@
       });
 
       document.getElementById('copyButton').addEventListener('click', () => {
-        navigator.clipboard.writeText('https://{{ .host }}/@{{ .username }}/{{ .statusID }}');
+        navigator.clipboard.writeText('https://{{ .host }}/@{{ .username }}/{{ $statusID }}');
       });
 
       document.getElementById('cancelButton').addEventListener('click', () => {
@@ -59,7 +61,7 @@
 
       document.getElementById("load-comment").addEventListener("click", function() {
         document.getElementById("load-comment").innerHTML = "Loading";
-        fetch('https://{{ .host }}/api/v1/statuses/{{ .statusID }}/context')
+        fetch('https://{{ .host }}/api/v1/statuses/{{ $statusID }}/context')
           .then(function(response) {
             return response.json();
           })
@@ -70,7 +72,7 @@
                 document.getElementById('mastodon-comments-list').innerHTML = "";
                 data['descendants'].forEach(function(reply) {
                   reply.account.display_name = escapeHtml(reply.account.display_name);
-                  reply.account.reply_class = reply.in_reply_to_id == "{{ .statusID }}" ? "reply-original" : "reply-child";
+                  reply.account.reply_class = reply.in_reply_to_id == "{{ $statusID }}" ? "reply-original" : "reply-child";
                   reply.created_date = new Date(reply.created_at);
                   reply.account.emojis.forEach(emoji => {
                     reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
