@@ -106,8 +106,9 @@ Follow [these steps](https://gohugo.io/content-management/comments/#configure-di
   username = "" # Your username
   statusID = "" # ID os the status (post) that comments should be related
   purifyCDN = "" # CDN address of pointing to a Purify package
-
 ```
+
+You can override the `statusID` parameter in a site's frontmatter for a per-page linking.
 
 ## Syntax Highlight
 
