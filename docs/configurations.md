@@ -1,37 +1,37 @@
 # Configurations
 
 - [Configurations](#configurations)
-  - [About Hugo Configurations](#about-hugo-configurations)
-    - [Commenting Systems](#commenting-systems)
-      - [Disqus](#disqus)
-      - [Commento](#commento)
-      - [Utterances](#utterances)
-      - [Giscus](#giscus)
-      - [Telegram](#telegram)
-      - [Cusdis](#cusdis)
-      - [Mastodon](#mastodon)
-  - [Syntax Highlight](#syntax-highlight)
-  - [Theme Parameters](#theme-parameters)
-    - [Social Icons Configuration](#social-icons-configuration)
-    - [Menu Items Configurations](#menu-items-configurations)
-    - [CSP](#csp)
-  - [Complete Example](#complete-example)
-  - [Front Matter](#front-matter)
-    - [Posts](#posts)
+	- [About Hugo Configurations](#about-hugo-configurations)
+		- [Commenting Systems](#commenting-systems)
+			- [Disqus](#disqus)
+			- [Commento](#commento)
+			- [Utterances](#utterances)
+			- [Giscus](#giscus)
+			- [Telegram](#telegram)
+			- [Cusdis](#cusdis)
+			- [Mastodon](#mastodon)
+	- [Syntax Highlight](#syntax-highlight)
+	- [Theme Parameters](#theme-parameters)
+		- [Social Icons Configuration](#social-icons-configuration)
+		- [Menu Items Configurations](#menu-items-configurations)
+		- [CSP](#csp)
+	- [Complete Example](#complete-example)
+	- [Front Matter](#front-matter)
+		- [Posts](#posts)
 
 ## About Hugo Configurations
 
 This theme supports:
 
-* [Analytics](/docs/analytics.md)
-
-* Commenting Systems
-  * [Disqus](https://disqus.com/)
-  * [Commento](https://commento.io/)
-  * [Utterances](https://utteranc.es/)
-  * [Giscus](https://giscus.app/)
-  * [Cusdis](https://cusdis.com/)
-  * [Telegram](https://comments.app/)
+- [Analytics](/docs/analytics.md)
+- Commenting Systems
+	- [Disqus](https://disqus.com/)
+	- [Commento](https://commento.io/)
+	- [Utterances](https://utteranc.es/)
+	- [Giscus](https://giscus.app/)
+	- [Cusdis](https://cusdis.com/)
+	- [Telegram](https://comments.app/)
+	- [Mastodon](https://joinmastodon.org/)
 
 ### Commenting Systems
 
@@ -45,81 +45,81 @@ Follow [these steps](https://gohugo.io/content-management/comments/#configure-di
 
 ```toml
 [params]
-  commentoURL = "https://cdn.commento.io" # Replace if you use a custom domain
+	commentoURL = "https://cdn.commento.io" # Replace if you use a custom domain
 ```
 
 #### Utterances
 
 ```toml
 [params.utterances]
-  repo = "" # https://utteranc.es/#heading-repository
-  issueTerm = "" # https://utteranc.es/#heading-mapping
-  label = "" # https://utteranc.es/#heading-issue-label
-  theme = "" # https://utteranc.es/#heading-theme
+	repo = "" # https://utteranc.es/#heading-repository
+	issueTerm = "" # https://utteranc.es/#heading-mapping
+	label = "" # https://utteranc.es/#heading-issue-label
+	theme = "" # https://utteranc.es/#heading-theme
 ```
 
 #### Giscus
 
 ```toml
 [params.giscus] # https://giscus.app
-  repo = ""
-  repoID = ""
-  category = ""
-  categoryID = ""
-  mapping = ""
-  term = ""
-  strict = ""
-  reactionsEnabled = ""
-  emitMetadata = ""
-  inputPosition = ""
-  theme = ""
-  lang = ""
-  loading = ""
+	repo = ""
+	repoID = ""
+	category = ""
+	categoryID = ""
+	mapping = ""
+	term = ""
+	strict = ""
+	reactionsEnabled = ""
+	emitMetadata = ""
+	inputPosition = ""
+	theme = ""
+	lang = ""
+	loading = ""
 ```
 
 #### Telegram
 
 ```toml
 [params.telegram] # https://comments.app/
-  siteID = ""
-  limit = ""
-  height = ""
-  color = ""
-  dislikes = ""
-  outlined = ""
-  colorful = ""
-  dark = ""
+	siteID = ""
+	limit = ""
+	height = ""
+	color = ""
+	dislikes = ""
+	outlined = ""
+	colorful = ""
+	dark = ""
 ```
 
 #### Cusdis
 
 ```toml
 [params.cusdis] # https://cusdis.com
-  data_app_id = ""
+	data_app_id = ""
 ```
 
 #### Mastodon
 
 ```toml
 [params.mastodon]
-  host = "" # Address of your Mastodon instance
-  username = "" # Your username
-  statusID = "" # ID os the status (post) that comments should be related
-  purifyCDN = "" # CDN address of pointing to a Purify package
+	host = "" # Address of your Mastodon instance
+	username = "" # Your username
+	statusID = "" # ID of the status (post) that comments should be related
+	purifyCDN = "" # CDN address pointing to a DOMPurify package
 ```
 
 You can override the `statusID` parameter in a site's frontmatter for a per-page linking.
 
 ## Syntax Highlight
 
-The theme uses the Goldmark syntax highlight system. GitHub light and dark are set as the default styles. To choose a different style, make sure `noClasses` is not set to false (default is true) and add to your `hugo.toml`:
+The theme uses Hugo's Chroma syntax highlighting system. GitHub light and dark are set as the default styles. To choose a different style, make sure `noClasses` is not set to false (default is true) and add to your `hugo.toml`:
 
-```
+```toml
 [markup.highlight]
-style = "monokai"
+	style = "monokai"
 ```
 
-All `style` are available [here](https://xyproto.github.io/splash/docs/all.html).
+All `style` values are available [here](https://xyproto.github.io/splash/docs/all.html).
 
 Alternatively, it is possible to use custom styles with generated CSS files. See [here](https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css).
 
@@ -127,36 +127,37 @@ Alternatively, it is possible to use custom styles with generated CSS files. See
 
 These are all the parameters used by `hugo-coder` theme.
 
-| Name                    | Type   | Required | Description                                                              | Default                           | Example                                           |
-| ----------------------- | ------ | -------- | ------------------------------------------------------------------------ | --------------------------------- | ------------------------------------------------- |
-| author                  | string | Yes      | Author name.                                                             |                                   | `"John Doe"`                                      |
-| info                    | string | Yes      | An headline, job title or similar.                                       |                                   | `"Full Stack Developer"`                          |
-| description             | string | Yes      | Description of the site.                                                 |                                   | `"John Doe's personal website"`                   |
-| keywords                | string | Yes      | Site keywords.                                                           |                                   | `"blog,developer,personal"`                       |
-| avatarURL               | string | No       | Photo of the author.                                                     |                                   | `"images/avatar.jpg"`                             |
-| gravatar                | string | No       | Gravatar photo of the author                                             |                                   | `"john.doe@example.com"`                          |
-| fediverseCreator        | string | No       | The author's fediverse handle.                                           |                                   | `"@johndoe@example.com"`                          |
-| faviconSVG              | string | No       | Custom path to a SCG favicon.                                            | `"/img/favicon.svg"`              | `"/img/favicon.svg"`                              |
-| favicon_32              | string | No       | Custom path to a 32x32 favicon.                                          | `"/img/favicon-32x32.png"`        | `"/img/favicon-32x32.png"`                        |
-| favicon_16              | string | No       | Custom path to a 16x16 favicon.                                          | `"/img/favicon-16x16.png"`        | `"/img/favicon-16x16.png"`                        |
-| touchIcon               | string | No       | Custom path to an apple-touch-icon                                       | `"/images/apple-touch-icon.png"`  | `"/images/apple-touch-icon.png"`                  |
-| mask_icon               | string | No       | Custom path to a mask-icon                                               | `"/images/safari-pinned-tab.svg"` | `"/images/safari-pinned-tab.svg"`                 |
-| mask_icon_color         | string | No       | Custom color for mask-icon color                                         | `"#5bbad5"`                       | `"#5bbad5"`                                       |
-| since                   | string | No       | Date shown in the footer before now year                                 |                                   | `"2020"`                                          |
-| maxSeeAlsoItems         | number | No       | Series see also post count                                               | `5`                               | `10`                                              |
-| commit                  | string | No       | Show the last git commit in the footer                                   |                                   | `"https://github.com/luizdepra/hugo-coder/tree/"` |
-| rtl                     | bool   | No       | Enable the Right To Left mode.                                           | `false`                           | `true` or `false`                                 |
-| math                    | bool   | No       | Enable MathJax Module and add JS into your site.                         | `false`                           | `true` or `false`                                 |
-| katex                   | bool   | No       | Enable KaTeX for all content types.                                      | `false`                           | `true` or `false`                                 |
-| colorScheme             | string | No       | Specify light/dark colorscheme                                           | `"auto"`                          | `"auto"` or `"light"` or `"dark"`                 |
-| hideColorSchemeToggle   | bool   | No       | If true, hides the color scheme toggle                                   | `false`                           | `true` or `false`                                 |
-| customCSS               | list   | No       | Add extra CSS files to the website.                                      | []                                | `["css/extra-style.css"]`                         |
-| customSCSS              | list   | No       | Add extra SCSS files to the website.                                     | []                                | `["scss/extra-style.scss"]`                       |
-| customJS                | list   | No       | Add extra JS files to the website.                                       | []                                | `["js/extra-script.js"]`                          |
-| customRemoteJS          | list   | No       | Add extra remote JS files to the website.                                | []                                | `["https://www.example.com/file.js"]`             |
-| enableTwemoji           | bool   | No       | Adds support for Twemoji                                                 | `false`                           | `true` or `false`                                 |
-| disableDefaultJsScripts | bool   | No       | If true, disables default js scripts (coder.js)                          | `false`                           | `true` or `false`                                 |
-| HeadTitle               | string | No       | When configured, it overrides the `<title>` tag with the provided string | ""                                | `"My custom title"`                               |
+| Name                    | Type           | Required | Description                                                              | Default                           | Example                                                                       |
+| ----------------------- | -------------- | -------- | ------------------------------------------------------------------------ | --------------------------------- | ----------------------------------------------------------------------------- |
+| author                  | string         | Yes      | Author name.                                                             |                                   | `"John Doe"`                                                                  |
+| info                    | string or list | Yes      | A headline, job titles or similar.                                       |                                   | `"Full Stack Developer and Cat dad"` or `["Full Stack Developer", "Cat dad"]` |
+| description             | string         | Yes      | Description of the site.                                                 |                                   | `"John Doe's personal website"`                                               |
+| keywords                | string         | Yes      | Site keywords.                                                           |                                   | `"blog,developer,personal"`                                                   |
+| avatarURL               | string         | No       | Photo of the author.                                                     |                                   | `"images/avatar.jpg"`                                                         |
+| gravatar                | string         | No       | Gravatar photo of the author                                             |                                   | `"john.doe@example.com"`                                                      |
+| fediverseCreator        | string         | No       | The author's fediverse handle.                                           |                                   | `"@johndoe@example.com"`                                                      |
+| faviconSVG              | string         | No       | Custom path to a SVG favicon.                                            | `"/img/favicon.svg"`              | `"/img/favicon.svg"`                                                          |
+| favicon_32              | string         | No       | Custom path to a 32x32 favicon.                                          | `"/img/favicon-32x32.png"`        | `"/img/favicon-32x32.png"`                                                    |
+| favicon_16              | string         | No       | Custom path to a 16x16 favicon.                                          | `"/img/favicon-16x16.png"`        | `"/img/favicon-16x16.png"`                                                    |
+| touchIcon               | string         | No       | Custom path to an apple-touch-icon                                       | `"/images/apple-touch-icon.png"`  | `"/images/apple-touch-icon.png"`                                              |
+| mask_icon               | string         | No       | Custom path to a mask-icon                                               | `"/images/safari-pinned-tab.svg"` | `"/images/safari-pinned-tab.svg"`                                             |
+| mask_icon_color         | string         | No       | Custom color for mask-icon color                                         | `"#5bbad5"`                       | `"#5bbad5"`                                                                   |
+| since                   | string         | No       | Date shown in the footer before now year                                 |                                   | `"2020"`                                                                      |
+| maxSeeAlsoItems         | number         | No       | Series see also post count                                               | `5`                               | `10`                                                                          |
+| commit                  | string         | No       | Show the last git commit in the footer                                   |                                   | `"https://github.com/luizdepra/hugo-coder/tree/"`                             |
+| rtl                     | bool           | No       | Enable the Right To Left mode.                                           | `false`                           | `true` or `false`                                                             |
+| math                    | bool           | No       | Enable MathJax Module and add JS into your site.                         | `false`                           | `true` or `false`                                                             |
+| katex                   | bool           | No       | Enable KaTeX for all content types.                                      | `false`                           | `true` or `false`                                                             |
+| colorScheme             | string         | No       | Specify light/dark colorscheme                                           | `"auto"`                          | `"auto"` or `"light"` or `"dark"`                                             |
+| hideColorSchemeToggle   | bool           | No       | If true, hides the color scheme toggle                                   | `false`                           | `true` or `false`                                                             |
+| customCSS               | list           | No       | Add extra CSS files to the website.                                      | []                                | `["css/extra-style.css"]`                                                     |
+| customSCSS              | list           | No       | Add extra SCSS files to the website.                                     | []                                | `["scss/extra-style.scss"]`                                                   |
+| customJS                | list           | No       | Add extra JS files to the website.                                       | []                                | `["js/extra-script.js"]`                                                      |
+| customRemoteJS          | list           | No       | Add extra remote JS files to the website.                                | []                                | `["https://www.example.com/file.js"]`                                         |
+| enableTwemoji           | bool           | No       | Adds support for Twemoji                                                 | `false`                           | `true` or `false`                                                             |
+| disableDefaultJsScripts | bool           | No       | If true, disables default js scripts (coder.js)                          | `false`                           | `true` or `false`                                                             |
+| HeadTitle               | string         | No       | When configured, it overrides the `<title>` tag with the provided string |                                   | `"My custom title"`                                                           |
+| dateFormat              | string         | No       | Formats the dates according to the given template.                       | `"January 2, 2006"`               | `"2006-01-02"` or `"02.01.2006"`                                              |
 
 
 ### Social Icons Configuration
@@ -175,25 +176,25 @@ An example:
 
 ```toml
 [[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/johndoe/"
+	name = "Github"
+	icon = "fa-brands fa-github fa-2x"
+	weight = 1
+	url = "https://github.com/johndoe/"
 [[params.social]]
-  name = "Gitlab"
-  icon = "fa-brands fa-gitlab fa-2x"
-  weight = 2
-  url = "https://gitlab.com/johndoe/"
+	name = "Gitlab"
+	icon = "fa-brands fa-gitlab fa-2x"
+	weight = 2
+	url = "https://gitlab.com/johndoe/"
 [[params.social]]
-  name = "Twitter"
-  icon = "fa-brands fa-x-twitter fa-2x"
-  weight = 3
-  url = "https://twitter.com/johndoe/"
+	name = "Twitter"
+	icon = "fa-brands fa-x-twitter fa-2x"
+	weight = 3
+	url = "https://twitter.com/johndoe/"
 ```
 
 ### Menu Items Configurations
 
-Menu Items are optional. To use them you will need to set all the following required parameters for each icon.
+Menu Items are optional. To use them you will need to set all the following required parameters for each item.
 
 | Configuration  | Type   | Required | Description                              | Example                         |
 | -------------- | ------ | -------- | ---------------------------------------- | ------------------------------- |
@@ -209,13 +210,13 @@ An example:
 
 ```toml
 [[menu.main]]
-  name = "Blog"
-  weight = 1
-  url  = "posts/"
+	name = "Blog"
+	weight = 1
+	url  = "posts/"
 [[menu.main]]
-  name = "About"
-  weight = 2
-  url = "about/"
+	name = "About"
+	weight = 2
+	url = "about/"
 ```
 
 ### CSP
@@ -238,29 +239,29 @@ An example:
 
 ```toml
 [params.csp]
-  childsrc = ["'self'"]
-  fontsrc = [
-    "'self'",
-    "https://fonts.gstatic.com",
-    "https://cdn.jsdelivr.net/"
-  ]
-  formaction = ["'self'"]
-  framesrc = ["'self'"]
-  imgsrc = ["'self'"]
-  objectsrc = ["'none'"]
-  stylesrc = [
-    "'self'",
-    "'unsafe-inline'",
-    "https://fonts.googleapis.com/",
-    "https://cdn.jsdelivr.net/"
-  ]
-  scriptsrc = [
-    "'self'",
-    "'unsafe-inline'",
-    "https://www.google-analytics.com"
-  ]
-  # connect-src directive – defines valid targets for XMLHttpRequest (AJAX), WebSockets or EventSource
-  connectsrc = ["'self'"]
+	childsrc = ["'self'"]
+	fontsrc = [
+		"'self'",
+		"https://fonts.gstatic.com",
+		"https://cdn.jsdelivr.net/"
+	]
+	formaction = ["'self'"]
+	framesrc = ["'self'"]
+	imgsrc = ["'self'"]
+	objectsrc = ["'none'"]
+	stylesrc = [
+		"'self'",
+		"'unsafe-inline'",
+		"https://fonts.googleapis.com/",
+		"https://cdn.jsdelivr.net/"
+	]
+	scriptsrc = [
+		"'self'",
+		"'unsafe-inline'",
+		"https://www.google-analytics.com"
+	]
+	# connect-src directive – defines valid targets for XMLHttpRequest (AJAX), WebSockets or EventSource
+	connectsrc = ["'self'"]
 ```
 
 ## Complete Example
@@ -274,72 +275,71 @@ theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-
 [pagination]
-pagerSize = 20
+	pagerSize = 20
 
 [services]
-[services.disqus]
-shortname = "yourdiscussshortname"
+	[services.disqus]
+		shortname = "yourdiscussshortname"
 
 [markup.highlight]
-style = "github-dark"
+	style = "github-dark"
 
 [params]
-  author = "John Doe"
-  info = "Full Stack DevOps and Magician"
-  description = "John Doe's personal website"
-  keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
-  #gravatar = "john.doe@example.com"
+	author = "John Doe"
+	info = "Full Stack DevOps and Magician"
+	description = "John Doe's personal website"
+	keywords = "blog,developer,personal"
+	avatarUrl = "images/avatar.jpg"
+	#gravatar = "john.doe@example.com"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+	faviconSVG = "/img/favicon.svg"
+	favicon_32 = "/img/favicon-32x32.png"
+	favicon_16 = "/img/favicon-16x16.png"
 
-  since = 2019
+	since = 2019
 
-  enableTwemoji = true
+	enableTwemoji = true
 
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
+	colorScheme = "auto"
+	hideColorSchemeToggle = false
 
-  # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
+	# customCSS = ["css/custom.css"]
+	# customSCSS = ["scss/custom.scss"]
+	# customJS = ["js/custom.js"]
 
 [taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
+	category = "categories"
+	series = "series"
+	tag = "tags"
+	author = "authors"
 
 # Social links
 [[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/johndoe/"
+	name = "Github"
+	icon = "fa-brands fa-github fa-2x"
+	weight = 1
+	url = "https://github.com/johndoe/"
 [[params.social]]
-  name = "Gitlab"
-  icon = "fa-brands fa-gitlab fa-2x"
-  weight = 2
-  url = "https://gitlab.com/johndoe/"
+	name = "Gitlab"
+	icon = "fa-brands fa-gitlab fa-2x"
+	weight = 2
+	url = "https://gitlab.com/johndoe/"
 [[params.social]]
-  name = "Twitter"
-  icon = "fa-brands fa-x-twitter fa-2x"
-  weight = 3
-  url = "https://twitter.com/johndoe/"
+	name = "Twitter"
+	icon = "fa-brands fa-x-twitter fa-2x"
+	weight = 3
+	url = "https://twitter.com/johndoe/"
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
-  weight = 1
-  url  = "posts/"
+	name = "Blog"
+	weight = 1
+	url  = "posts/"
 [[menu.main]]
-  name = "About"
-  weight = 2
-  url = "about/"
+	name = "About"
+	weight = 2
+	url = "about/"
 ```
 
 ## Front Matter
@@ -365,6 +365,6 @@ These are the front matter variables used by `hugo-coder` theme.
 | math             | bool   | No       | If true, MathJax is enabled only for this post.    | `false` | `true` or `false`                                                               |
 | katex            | bool   | No       | If true, KaTeX is enabled only for this post.      | `false` | `true` or `false`                                                               |
 | disableComments  | bool   | No       | If true, comments are disabled.                    | `false` | `true` or `false`                                                               |
-| canonicalUrl     | string | No       | Link to override <link rel="canonical"/> in <head> | `false` | `"https://my-company.com/blog/my-blog-post-that-I-repost-without-hurtiong-seo"` |
+| canonicalUrl     | string | No       | Link to override <link rel="canonical"/> in <head> |         | `"https://my-company.com/blog/my-blog-post-that-I-repost-without-hurtiong-seo"` |
 
 > "tags", "categories", "series" and "authors" are taxonomies defined in the `hugo.toml` file.

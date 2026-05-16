@@ -2,5 +2,5 @@
 
 ```toml
 [params.clicky]
-    id = "site-id"
+	id = "site-id"
 ```

@@ -1,15 +1,18 @@
 # Multilingual-Mode
 
-* [Available Languages](#available-languages)
-* [Configure Languages](#configure-languages)
-* [Translation File Example](#translation-file-example)
+- [Available Languages](#available-languages)
+- [Configure Languages](#configure-languages)
+- [Translation File Example](#translation-file-example)
 
 ## Available Languages
 
 This theme supports the following languages:
 
+- Albanian
 - Arabic
 - Bengali
+- Brazilian Portuguese
+- Catalan
 - Czech
 - German
 - English
@@ -19,16 +22,20 @@ This theme supports the following languages:
 - Hebrew
 - Hindi
 - Hungarian
+- Indonesian
 - Italian
 - Japanese
+- Korean
 - Malay
+- Nepali
 - Dutch
 - Polish
-- Brazilian Portuguese
 - Romanian
 - Russian
-- Swedish
+- Serbian
+- Serbian (Latin)
 - Slovak
+- Swedish
 - Turkish
 - Simplified Chinese
 - Taiwan Chinese
@@ -41,34 +48,71 @@ Go to [this Hugo documentation page](https://gohugo.io/content-management/multil
 ## Translation File Example
 
 ```toml
-[category]
-other = "category"
+[categories]
+	one = "category"
+	other = "categories"
 
-[tag]
-other = "tag"
+[tags]
+	one = "tag"
+	other = "tags"
 
 [series]
-other = "series"
+	one = "series"
+	other = "series"
 
-[author]
-other = "author"
+[authors]
+	one = "author"
+	other = "authors"
+
+[posts]
+	other = "posts"
 
 [reading_time]
-one = "One-minute read"
-other = "{{ .Count }}-minute read"
+	one = "One-minute read"
+	other = "{{ .Count }}-minute read"
 
 [page_not_found]
-other = "Page Not Found"
+	other = "Page Not Found"
 
 [page_does_not_exist]
-other = "Sorry, this page does not exist."
+	other = "Sorry, this page does not exist."
 
 [head_back]
-other = "You can head back to <a href=\"{{ . }}\">homepage</a>."
+	other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
+
+[licensed_under]
+	other = "Licensed under"
 
 [powered_by]
-other = "Powered by"
+	other = "Powered by"
 
 [see_also]
-other = "See also in"
+	other = "See also in"
+
+[note]
+	other = "note"
+
+[tip]
+	other = "tip"
+
+[example]
+	other = "example"
+
+[question]
+	other = "question"
+
+[info]
+	other = "info"
+
+[warning]
+	other = "warning"
+
+[error]
+	other = "error"
+
+[link_to_heading]
+	other = "Link to heading"
+
+[entry_toc]
+	other = "Table of Contents"
 ```

@@ -10,7 +10,7 @@ If you just want to test this theme, go to [this page](https://themes.gohugo.io/
 
 You can also clone or download it, then run these commands:
 
-```
+```bash
 git clone https://github.com/luizdepra/hugo-coder.git
 
 cd hugo-coder

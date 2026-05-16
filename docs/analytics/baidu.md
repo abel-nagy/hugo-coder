@@ -8,10 +8,10 @@ as follows:
 <script>
 var _hmt = _hmt || [];
 (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?<your_token_at_here>";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?<your_token_at_here>";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
 })();
 </script>
 ```
@@ -21,5 +21,5 @@ config file:
 
 ```toml
 [params.baidu]
-    token = "your_token_at_here"
+	token = "your_token_at_here"
 ```
