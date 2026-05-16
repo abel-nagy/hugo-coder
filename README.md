@@ -19,6 +19,21 @@ A simple and clean blog theme for [Hugo](https://gohugo.io/).
 
 ![](images/screenshot.png)
 
+## About the fork
+
+This fork was made because the original author of the project only visits the pull requests and issues every now and then.
+I'm planning to contribute my modifications upstream so the users of the main project could benefit from them but in the meantime I can change the implementation without friction on this fork and share it with others.
+
+### TODO
+
+- [ ] Localization changes
+    - [x] Update Hungarian translation
+    - [ ] Update Hungarian date(/currency?) format(s)
+- [x] Add possibility to link Mastodon posts per website posts
+- [ ] Add translatable partials (like "Comments") and other text
+- [ ] Fix '`disableComments` front matter variable is useless with Mastodon partial' bug
+- [ ] Optimize site performance ([PageSpeed Insights](https://pagespeed.web.dev))
+
 ## Live Demo
 
 See [here](https://hugo-coder.netlify.app/).
