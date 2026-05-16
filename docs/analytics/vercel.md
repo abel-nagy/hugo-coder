@@ -2,5 +2,5 @@
 
 ```toml
 [params]
-    vercelAnalytics = true
+	vercelAnalytics = true
 ```

@@ -2,5 +2,5 @@
 
 ```toml
 [params.cloudflare]
-    token = "token"
+	token = "token"
 ```

@@ -2,5 +2,5 @@
 
 ```toml
 [params.googleTagManager]
-    id = "gid"
+	id = "gid"
 ```
