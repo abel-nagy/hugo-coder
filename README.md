@@ -27,9 +27,12 @@ I'm planning to contribute my modifications upstream so the users of the main pr
 - [ ] Localization changes
     - [x] Update Hungarian translation
     - [ ] Update Hungarian date(/currency?) format(s)
-- [x] Add possibility to link Mastodon posts per website posts
-- [ ] Add translatable partials (like "Comments") and other text
-- [ ] Fix '`disableComments` front matter variable is useless with Mastodon partial' bug
+- [ ] Mastodon cleanup
+    - [x] Add possibility to link Mastodon posts per website posts
+    - [ ] Add translatable partials (like "Comments") and other text
+    - [ ] Fix '`disableComments` front matter variable is useless with Mastodon partial' bug
+    - [ ] Make reply threads more structured (multiple/multi-level comments)
+    - [ ] Add tickmark so the user can enable auto-loading comments
 - [ ] Optimize site performance ([PageSpeed Insights](https://pagespeed.web.dev))
 
 ## Live Demo
